@@ -19,5 +19,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", todoRoute);
+// /Bootstrap
+app.use(express.static(path.join(__dirname, "node_modules/bootstrap/dist/")));
 
 module.exports = app;

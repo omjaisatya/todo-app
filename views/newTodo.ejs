@@ -1,12 +1,12 @@
 <%- include("partials/header") %>
-    <div class="table-container">
+    <div class="table-container container rounded rounded-5 border-black">
       <h2 class="todo-title">Add todo</h2>
 
       <div>
-        <a class="btn" href="/">Back</a>
+        <a class="btn btn-primary" href="/">Back</a>
 
         <form action="/add-todo" method="post">
-          <div class="new-todo">
+          <div class="new-todo table table-hover table-striped-columns">
             <div class="form-group">
               <label for="title" class="text-light">Title</label>
               <input
@@ -28,7 +28,7 @@
             </div>
 
             <div class="form-group">
-              <button type="submit" class="btn">Save</button>
+              <button type="submit" class="btn btn-success">Save</button>
             </div>
           </div>
         </form>

@@ -1,13 +1,13 @@
 <%- include("partials/header") %>
-    <div class="table-container">
+    <div class="container border rounded rounded-5 border-black">
       <h2 class="todo-title">Delete todo</h2>
-      <a class="btn" href="/">Back</a>
+      <a class="btn btn-primary" href="/">Back</a>
 
-      <div class="confirm">
+      <div class="confirm border d-flex container">
         <p>
           Are you sure you want delete this todo?
-          <a class="btn" href="/confirm-delete?id=<%= id %>&confirm=yes">Yes</a>
-          <a class="btn" href="/confirm-delete?id=<%= id %>&confirm=no">No</a>
+          <a class="btn btn-danger" href="/confirm-delete?id=<%= id %>&confirm=yes">Yes</a>
+          <a class="btn btn-success" href="/confirm-delete?id=<%= id %>&confirm=no">No</a>
         </p>
       </div>
     </div>

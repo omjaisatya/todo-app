@@ -1,12 +1,12 @@
 <%- include("partials/header") %>
-    <div class="table-container">
+    <div class="table-container container rounded rounded-5 border-black">
       <h2 class="todo-title">Todo list</h2>
       <div>
-        <a class="btn" href="/add-todo">Add todo</a>
+        <a class="btn btn-success" href="/add-todo">Add todo</a>
       </div>
       <br />
 
-      <table>
+      <table class="table table-hover table-striped-columns">
         <tr>
           <th>Title</th>
           <th>Description</th>
@@ -21,8 +21,8 @@
             <td><%= moment(todos[i].createdAt).format("MMM DD, YYYY, HH:mm:ss")  %></td>
             <td><%= moment(todos[i].updatedAt).format("MMM DD, YYYY, HH:mm:ss") %></td>
             <td>
-              <a class="btn" href="/update-todo?id=<%= todos[i]._id %>">Edit</a>
-              <a class="btn" href="/delete-todo?id=<%= todos[i]._id %>">Delete</a>
+              <a class="btn btn-secondary" href="/update-todo?id=<%= todos[i]._id %>">Edit</a>
+              <a class="btn btn-danger" href="/delete-todo?id=<%= todos[i]._id %>">Delete</a>
             </td>
         </tr>
           <% } %>    
